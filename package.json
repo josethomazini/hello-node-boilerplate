@@ -2,12 +2,22 @@
   "name": "hello-node-boilerplate",
   "version": "1.0.0",
   "description": "A boilerplate for a Hello in Node.js",
-  "main": "src/index.js",
+  "private": true,
   "scripts": {
-    "start:dev": "node src/index.js"
+    "install:project": "yarn install",
+    "test": "",
+    "start": "webpack --config webpack.config.js",
+    "start:development": "PORT=5000 node src/js/index.js",
+    "start:production": "PORT=8081 node src/js/index.js",
+    "start:staging": "PORT=8082 node src/js/index.js",
+    "start:testing": "PORT=8083 node src/js/index.js"
   },
   "dependencies": {
     "express": "^4.15.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
 }
