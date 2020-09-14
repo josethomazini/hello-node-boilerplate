@@ -69,4 +69,4 @@ Call the scripts:
 ## Additional scripts
 
 - yarn-upgrade (to upgrade all the modules, you should test everything right after this process)
-- test (not implemented yet)
+- lint (applies an analysis using the AirBnB code style)
