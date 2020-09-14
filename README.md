@@ -3,6 +3,7 @@
 A boilerplate for a Hello in Node.js.
 
 This project uses:
+
 ```
 Node 14.9.
 ```
@@ -37,13 +38,14 @@ Remote - Containers
 ```
 
 3.2 Run on VSCode:
+
 ```
 Remote-Containers: Reopen in Container
 ```
 
 3.3 Choose this project's folder.
 
-4. Either from inside the container or from your local system you can call the scripts to prepare the environment
+4 Either from inside the container or from your local system you can call the scripts to prepare the environment
 
 ```sh
 npm run yarn:install
