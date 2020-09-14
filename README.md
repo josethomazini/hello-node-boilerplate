@@ -68,5 +68,8 @@ Call the scripts:
 
 ## Additional scripts
 
-- yarn-upgrade (to upgrade all the modules, you should test everything right after this process)
-- lint (applies an analysis using the AirBnB code style)
+- yarn-upgrade :: to upgrade all the modules, you should test everything right after this process
+- lint :: applies an analysis using the AirBnB code style
+- test :: run tests
+- test:coverage :: verifies how much code the tests covers
+- test:watch :: auto-executes tests whenever a file is saved
