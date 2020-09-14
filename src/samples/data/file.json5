@@ -1,0 +1,4 @@
+{
+  env: 'production from json5!!',
+  passwordStrength: 'strong',
+}

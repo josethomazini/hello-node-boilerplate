@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/roboto/Roboto-Light.ttf') format('ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+label {
+    font-family: 'RobotoLight';
+    font-size: 25px;
+    color: lightblue;
+}

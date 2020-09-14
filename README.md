@@ -36,18 +36,18 @@ git init
 Remote - Containers
 ```
 
-3.2 Run command:
+3.2 Run on VSCode:
 ```
 Remote-Containers: Open Folder in Container
 ```
 
-3.3 Choose the project's folder.
+3.3 Choose this project's folder.
 
 4. Either from inside the container or from your local system you can call the scripts to prepare the environment
 
 ```sh
-yarn install:project
-yarn start:development
+npm run yarn:install
+npm run development:start
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running on [localhost:5000](http://localhost:5000/)
