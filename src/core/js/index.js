@@ -1,9 +1,10 @@
 __webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM=';
-import '../css/style.css';
 
-import { run_samples } from '../../samples/js/index'
+import '@/core/css/style.css';
 
-import { labelComponentFactory } from './factories';
+import { run_samples } from '@/samples/js/index'
+
+import { labelComponentFactory } from '@/core/js/factories';
 
 const label = labelComponentFactory('Hello World!');
 

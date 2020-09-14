@@ -39,6 +39,12 @@ module.exports = (env) => {
       path: path.resolve(__dirname, "dist"),
     },
 
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
+      }
+    },
+
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({

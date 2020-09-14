@@ -1,13 +1,13 @@
-import '../sass/style.scss';
-import '../ts/index.ts';
+import '@/samples/sass/style.scss';
+import '@/samples/ts/index.ts';
 
-import fileJson from '../data/file.json';
-import fileXml from '../data/file.xml';
-import squarePng from '../images/square.png';
-import appConfig from '../data/file.json5';
-import fileTxt from '../data/file.txt';
+import fileJson from '@/samples/data/file.json';
+import fileXml from '@/samples/data/file.xml';
+import squarePng from '@/samples/images/square.png';
+import appConfig from '@/samples/data/file.json5';
+import fileTxt from '@/samples/data/file.txt';
 
-import { imageComponentFactory } from './factories'
+import { imageComponentFactory } from '@/samples/js/factories'
 
 
 export function run_samples() {
