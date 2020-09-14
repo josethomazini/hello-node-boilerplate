@@ -42,10 +42,10 @@ module.exports = (env) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: 'Hello',
+        title: "Hello Title",
+        favicon: "./src/samples/images/square.png"
       }),
     ],
-
     optimization: {
       moduleIds: 'hashed',
       runtimeChunk: 'single',
