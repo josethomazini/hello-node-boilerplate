@@ -6,6 +6,7 @@
   "scripts": {
     "yarn:install": "yarn install",
     "yarn:upgrade": "yarn upgrade",
+    "lint": "eslint --fix .",
     "test": "",
     "build": "webpack --env.production",
     "bundle:analysis": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
@@ -14,6 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eslint-loader": "^4.0.2",
     "express": "^4.15.2"
   },
   "devDependencies": {
@@ -22,14 +24,20 @@
     "@types/node": "^14.10.1",
     "@types/webpack": "^4.41.22",
     "@types/webpack-dev-server": "^3.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "csv-loader": "^3.0.3",
     "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.0",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "json5-loader": "^4.0.0",
+    "prettier": "^2.1.1",
     "raw-loader": "^4.0.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
