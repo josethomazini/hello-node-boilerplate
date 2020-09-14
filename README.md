@@ -38,7 +38,7 @@ Remote - Containers
 
 3.2 Run on VSCode:
 ```
-Remote-Containers: Open Folder in Container
+Remote-Containers: Reopen in Container
 ```
 
 3.3 Choose this project's folder.
