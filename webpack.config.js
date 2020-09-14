@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -6,50 +6,48 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 function isProduction(env) {
   if (env === undefined) return false;
 
-  if (env.hasOwnProperty('production')) {
-    return env.production == true;
-  } else {
-    return false;
+  if (Object.prototype.hasOwnProperty.call(env, 'production')) {
+    return env.production === true;
   }
+  return false;
 }
 
 module.exports = (env) => {
-
   let context;
 
   if (isProduction(env)) {
     context = {
-      mode: "production",
-      devtool: 'source-map'
-    }
+      mode: 'production',
+      devtool: 'source-map',
+    };
   } else {
     context = {
-      mode: "development",
+      mode: 'development',
       devtool: 'inline-source-map',
       devServer: {
         contentBase: './dist',
       },
-    }
+    };
   }
 
-  let base = {
+  const base = {
     entry: './src/core/js/index.js',
     output: {
       filename: '[name].[contenthash].js',
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, 'dist'),
     },
 
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
-      }
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
 
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: "Hello Title",
-        favicon: "./src/samples/images/square.png"
+        title: 'Hello Title',
+        favicon: './src/samples/images/square.png',
       }),
     ],
     optimization: {
@@ -61,9 +59,9 @@ module.exports = (env) => {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
-          }
-        }
-      }
+          },
+        },
+      },
     },
 
     module: {
@@ -82,7 +80,7 @@ module.exports = (env) => {
           loader: 'file-loader',
           options: {
             name: '[name].[contenthash].[ext]',
-          }
+          },
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -90,7 +88,7 @@ module.exports = (env) => {
           loader: 'file-loader',
           options: {
             name: '[name].[contenthash].[ext]',
-          }
+          },
         },
         {
           test: /\.(csv|tsv)$/,
@@ -114,14 +112,23 @@ module.exports = (env) => {
           loader: 'raw-loader',
         },
         {
+          enforce: 'pre',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+          options: {
+            emitError: true,
+          },
+        },
+        {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
-            }
-          }
+              presets: ['@babel/preset-env'],
+            },
+          },
         },
         {
           test: /\.s[ac]ss$/i,
@@ -137,15 +144,15 @@ module.exports = (env) => {
             {
               loader: 'ts-loader',
               options: {
-                transpileOnly: true
+                transpileOnly: true,
               },
             },
           ],
-        }
+        },
 
       ],
     },
-  }
+  };
 
-  return { ...context, ...base }
-}
+  return { ...context, ...base };
+};
