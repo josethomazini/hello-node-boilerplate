@@ -1,4 +1,6 @@
 import '@/samples/sass/style.scss';
+import '@/samples/css/style.css';
+
 import '@/samples/ts/index.ts';
 
 import fileJson from '@/samples/data/file.json';

@@ -31,7 +31,9 @@ module.exports = (env) => {
   }
 
   const base = {
-    entry: './src/core/js/index.js',
+    entry: {
+      core: './src/core/js/index.js',
+    },
     output: {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, 'dist'),
@@ -46,7 +48,10 @@ module.exports = (env) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
+        hash: true,
         title: 'Hello Title',
+        template: './src/core/pages/index.html',
+        chunks: ['vendor', 'runtime', 'core'],
         favicon: './src/samples/images/square.png',
       }),
     ],

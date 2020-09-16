@@ -1,6 +1,4 @@
-import '@/core/css/style.css';
-
-import runSamples from '@/samples/js/index';
+// import runSamples from '@/samples/js/index';
 
 import labelComponentFactory from '@/core/js/factories';
 
@@ -10,4 +8,4 @@ const label = labelComponentFactory('Hello World!');
 
 document.body.appendChild(label);
 
-runSamples();
+// runSamples();
