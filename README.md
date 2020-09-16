@@ -47,6 +47,20 @@ Execute the command:
 Remote-Containers: Reopen in Container
 ```
 
+Right after the container is up, install 3 apps in Dev Container:
+
+- Prettier - Code formatter
+- ESLint
+- EditorConfig for VS Code
+
+You will need to reload the container.
+
+Finally open the settings (ctrl + ,), choose the tab "Remote [Dev Container: Existing Dockerfile]", change the view to Json and add this configuration:
+
+```
+  "editor.formatOnSave": false
+```
+
 3.3 Choose this project's folder.
 
 4 Either from inside the container or from your local system you can call the scripts to prepare the environment
