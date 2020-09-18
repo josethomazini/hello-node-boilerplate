@@ -12,32 +12,32 @@ You are not required to have that specific version, neither to have Node and yar
 
 ## Running Dev
 
-1. Clone repo
+### Clone repo
 
 ```sh
 git clone https://github.com/josethomazini/hello-node-boilerplate {YOUR_APP_NAME}
 ```
 
-2. Access your new project
+### Access your new project
 
 ```sh
 cd {YOUR_APP_NAME}
 ```
 
-3. Remove the boilerplate's git folder and start a new one
+### Remove the boilerplate's git folder and start a new one
 
 ```sh
 rm -rf .git
 git init
 ```
 
-3.1 If you plan to develop it by using remote containers on VSCode, you must install the following extension:
+### If you plan to develop it by using remote containers on VSCode, you must install the following extension:
 
 ```
 Remote - Containers
 ```
 
-3.2 Run on VSCode:
+### Run on VSCode:
 
 Open the root of your project on VSCode.
 
@@ -46,6 +46,8 @@ Execute the command:
 ```
 Remote-Containers: Reopen in Container
 ```
+
+- Choose this project's folder.
 
 Right after the container is up, install 3 apps in Dev Container:
 
@@ -61,9 +63,7 @@ Finally open the settings (ctrl + ,), choose the tab "Remote [Dev Container: Exi
   "editor.formatOnSave": false
 ```
 
-3.3 Choose this project's folder.
-
-4 Either from inside the container or from your local system you can call the scripts to prepare the environment
+### Either from inside the container or from your local system you can call the scripts to prepare the environment
 
 ```
 yarn:install
